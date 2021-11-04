@@ -1,0 +1,8 @@
+///////////////////////////////////////////////////////////
+////        MAIN CONTAINER
+.container {
+  padding: 5vh 0;
+  @include respond(1440) {
+    padding: 0;
+  }
+}

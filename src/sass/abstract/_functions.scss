@@ -1,0 +1,11 @@
+@function get-width($view-width) {
+  $ratio: $pic-container-width-desktop / $main-component-max-width-desktop;
+  $new-width: $ratio * ($view-width / 10);
+  @return $new-width;
+}
+
+@function get-height-desktop($view-width) {
+  $calculated-width: get-width($view-width);
+  $new-height: $calculated-width / $pic-aspect-ratio-desktop;
+  @return $new-height;
+}

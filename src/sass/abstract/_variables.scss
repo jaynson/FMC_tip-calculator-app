@@ -1,0 +1,31 @@
+$default-text-size: 62.5%;
+
+// Color Variables
+
+$color-primary-strong-cyan: hsl(172, 67%, 45%);
+
+$color-neutral-very-dark-cyan: hsl(183, 100%, 15%);
+$color-neutral-darker-grayish-cyan: hsl(186, 14%, 43%);
+$color-neutral-dark-grayish-cyan: hsl(184, 14%, 56%);
+$color-neutral-lighter-grayish-cyan: hsl(185, 41%, 84%);
+$color-neutral-light-grayish-cyan: hsl(189, 41%, 97%);
+$color-neutral-white: hsl(0, 0%, 100%);
+
+//Background container Variables-Desktop
+$main-component-max-width-desktop: 144rem;
+$main-component-max-height-desktop: 102.4rem;
+
+//Background container Variables-Mobile
+$main-component-max-width-mobile-650px: 70rem;
+$main-component-max-width-mobile-375px: 37.5rem;
+$main-component-max-width-mobile-285px: 28.5rem;
+
+//Content Variables
+$content-max-width-desktop: 92rem;
+$content-max-width-mobile: 37.5rem;
+
+//Card Variables Desktop
+$card-max-width-desktop: 63.7rem;
+
+//Card Variables Responsive
+$card-max-width-responsive-612px: 40rem;
