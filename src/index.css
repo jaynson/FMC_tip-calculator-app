@@ -14,10 +14,24 @@ body {
     font-weight: 700; }
     body .display-panel__label--text {
       font-size: 1.4rem;
-      color: white; }
+      color: white;
+      line-height: 1.3; }
+      @media only screen and (max-width: 48.125em) {
+        body .display-panel__label--text {
+          font-size: 1.2rem; } }
+      @media only screen and (max-width: 23.4375em) {
+        body .display-panel__label--text {
+          font-size: 1rem; } }
     body .display-panel__label--common {
       font-size: 1.3rem;
-      color: #26c0ab; }
+      color: #26c0ab;
+      line-height: 1.3; }
+      @media only screen and (max-width: 48.125em) {
+        body .display-panel__label--common {
+          font-size: 1.1rem; } }
+      @media only screen and (max-width: 23.4375em) {
+        body .display-panel__label--common {
+          font-size: 1rem; } }
   body .display-panel__output {
     font-weight: 700;
     line-height: 1.2;
@@ -25,21 +39,58 @@ body {
     color: #26c0ab; }
     body .display-panel__output span {
       font-size: 5rem; }
+      @media only screen and (max-width: 48.125em) {
+        body .display-panel__output span {
+          font-size: 3.3rem; } }
+      @media only screen and (max-width: 25em) {
+        body .display-panel__output span {
+          font-size: 2.8rem; } }
+      @media only screen and (max-width: 21.25em) {
+        body .display-panel__output span {
+          font-size: 2.3rem; } }
+    @media only screen and (max-width: 48.125em) {
+      body .display-panel__output {
+        font-size: 3.2rem; } }
+    @media only screen and (max-width: 25em) {
+      body .display-panel__output {
+        font-size: 2.7rem; } }
+    @media only screen and (max-width: 21.25em) {
+      body .display-panel__output {
+        font-size: 2.1rem; } }
   body .user-input__label {
     color: #5e7a7d;
     font-size: 1.7rem;
     font-weight: 700; }
+    @media only screen and (max-width: 48.125em) {
+      body .user-input__label {
+        font-size: 1.4rem; } }
   body .user-input__field {
     font-family: inherit;
     font-size: inherit;
     color: #00494d;
     font-weight: 700;
     text-align: right; }
+    body .user-input__field + .invalid-value {
+      font-size: 1.2rem;
+      color: rgba(241, 59, 13, 0.89);
+      font-weight: 700; }
+      @media only screen and (max-width: 48.125em) {
+        body .user-input__field + .invalid-value {
+          font-size: 1.1rem; } }
     body .user-input__field::placeholder {
       color: rgba(0, 73, 77, 0.5);
       font-size: 2rem; }
     body .user-input__field--custom-tip::placeholder {
       text-align: center; }
+      @media only screen and (max-width: 56.25em) {
+        body .user-input__field--custom-tip::placeholder {
+          font-size: 1.4rem; } }
+      @media only screen and (max-width: 46.875em) {
+        body .user-input__field--custom-tip::placeholder {
+          font-size: 1.1rem; } }
+    @media only screen and (max-width: 48.125em) {
+      body .user-input__field {
+        font-size: 1.6rem; } }
   body .btn {
     font-family: inherit;
     font-size: inherit;
@@ -53,6 +104,9 @@ body {
     body .btn-reset {
       color: #00494d;
       text-transform: uppercase; }
+    @media only screen and (max-width: 48.125em) {
+      body .btn {
+        font-size: 1.6rem; } }
 
 .btn {
   border: none;
@@ -72,20 +126,32 @@ body {
   background-color: #26c0ab; }
   .btn-reset:hover {
     background-color: #c5e4e7; }
+  .btn-reset.inactive {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: auto; }
 
 .display-panel-view {
   background-color: #00494d;
   flex: 0 0 48.5%;
   border-radius: 1.6rem; }
+  @media only screen and (max-width: 42.5em) {
+    .display-panel-view {
+      flex: 1; } }
 
 .display-panel-content {
   height: 100%;
   padding: 4rem;
   display: flex;
   flex-direction: column; }
+  @media only screen and (max-width: 42.5em) {
+    .display-panel-content {
+      padding: 2.5rem; } }
 
 .panels {
   margin-bottom: auto; }
+  @media only screen and (max-width: 42.5em) {
+    .panels {
+      margin-bottom: 4rem; } }
 
 .display-panel {
   display: flex;
@@ -108,6 +174,17 @@ body {
   .user-input__field:focus {
     outline: none;
     border: 0.2rem solid #26c0ab; }
+  .user-input__field.invalid {
+    border: 0.2rem solid rgba(241, 59, 13, 0.89); }
+  .user-input__field + .invalid-value {
+    position: absolute;
+    top: -1.5rem;
+    right: 0; }
+    @media only screen and (max-width: 23.4375em) {
+      .user-input__field + .invalid-value {
+        top: 100%; } }
+  .user-input__field--custom-tip + .invalid-value {
+    display: none; }
 
 .icon__svg {
   width: 1.55rem;
@@ -130,17 +207,46 @@ input[type='number']::-webkit-outer-spin-button {
 
 .component {
   max-width: 144rem;
+  height: 102.4rem;
   background-color: #c5e4e7;
   margin: 0rem auto;
-  padding: 20rem 0; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  @media only screen and (max-width: 59.375em) {
+    .component {
+      padding: 0 2rem; } }
+  @media only screen and (max-width: 48.125em) {
+    .component {
+      height: 77.4rem; } }
+  @media only screen and (max-width: 42.5em) {
+    .component {
+      height: 102.4rem; } }
+
+.svg__logo {
+  width: 9rem;
+  height: 6rem;
+  margin-bottom: -10rem; }
+  @media only screen and (max-width: 48.125em) {
+    .svg__logo {
+      margin-bottom: -3rem; } }
 
 .app {
   max-width: 92rem;
   margin: 0rem auto;
   background-color: white;
+  border-radius: 2rem;
   padding: 3rem;
   display: flex;
   justify-content: space-between; }
+  @media only screen and (max-width: 42.5em) {
+    .app {
+      max-width: 40rem;
+      flex-direction: column; } }
+  @media only screen and (max-width: 23.4375em) {
+    .app {
+      padding: 1.5rem; } }
 
 .calculator-view {
   padding: 1rem;
@@ -148,13 +254,19 @@ input[type='number']::-webkit-outer-spin-button {
   .calculator-view .bill-section,
   .calculator-view .tip-section {
     margin-bottom: 2.5rem; }
+  @media only screen and (max-width: 42.5em) {
+    .calculator-view {
+      margin-bottom: 2.5rem; } }
 
 .tip-selector-view .tips-wrapper {
-  height: 13rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between; }
 
 .tip-selector-view .tip-selector {
-  flex: 0 0 30%; }
+  flex: 0 0 30%;
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 42.5em) {
+    .tip-selector-view .tip-selector {
+      flex: 0 0 45%; } }

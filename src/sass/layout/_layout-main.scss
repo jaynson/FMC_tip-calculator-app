@@ -11,9 +11,35 @@
 ////        COMPONENT
 .component {
   max-width: $main-component-max-width-desktop;
+  height: $main-component-max-height-desktop;
+  // height: 100%;
   background-color: $color-neutral-lighter-grayish-cyan;
   @include margin-centralize;
-  padding: 20rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @include respond(950) {
+    padding: 0 2rem;
+  }
+  @include respond(770) {
+    height: $main-component-max-height-desktop - 25;
+  }
+  @include respond(680) {
+    height: $main-component-max-height-desktop;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        LOGO
+.svg__logo {
+  width: 9rem;
+  height: 6rem;
+  margin-bottom: -10rem;
+  @include respond(770) {
+    margin-bottom: -3rem;
+  }
 }
 
 ///////////////////////////////////////////////////////////
@@ -22,9 +48,19 @@
   max-width: $content-max-width-desktop;
   @include margin-centralize;
   background-color: $color-neutral-white;
+  border-radius: 2rem;
   padding: 3rem;
   display: flex;
   justify-content: space-between;
+
+  @include respond(680) {
+    max-width: $content-max-width-mobile;
+    flex-direction: column;
+    // height: 75%;
+  }
+  @include respond(375) {
+    padding: 1.5rem;
+  }
 }
 
 ///////////////////////////////////////////////////////////
@@ -37,20 +73,33 @@
   .tip-section {
     margin-bottom: 2.5rem;
   }
+
+  @include respond(680) {
+    margin-bottom: 2.5rem;
+  }
 }
 
 ///////////////////////////////////////////////////////////
 ////        Tip Selector View
 .tip-selector-view {
   .tips-wrapper {
-    height: 13rem;
+    // height: 13rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+
+    @include respond(770) {
+      // height: 10rem;
+    }
   }
 
   .tip-selector {
     flex: 0 0 30%;
+    margin-bottom: 2rem;
+
+    @include respond(680) {
+      flex: 0 0 45%;
+    }
   }
 }
