@@ -3,8 +3,88 @@
 }
 
 body {
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: 'Space Mono', sans-serif;
   // font-family: 'Poppins', sans-serif;
   font-size: 2.4rem;
+
+  .display-panel {
+    //label
+    &__label {
+      font-weight: 700;
+      &--text {
+        font-size: 1.4rem;
+        color: $color-neutral-white;
+      }
+      &--common {
+        font-size: 1.3rem;
+        color: $color-primary-strong-cyan;
+      }
+    }
+
+    //output
+    &__output {
+      font-weight: 700;
+      line-height: 1.2;
+      font-size: 4.5rem;
+      color: $color-primary-strong-cyan;
+      & span {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  .user-input {
+    &__label {
+      color: $color-neutral-darker-grayish-cyan;
+      font-size: 1.7rem;
+      font-weight: 700;
+    }
+
+    &__field {
+      font-family: inherit;
+      font-size: inherit;
+      color: $color-neutral-very-dark-cyan;
+      font-weight: 700;
+      text-align: right;
+
+      &::placeholder {
+        color: rgba($color-neutral-very-dark-cyan, 0.5);
+        font-size: 2rem;
+      }
+
+      &--custom-tip {
+        &::placeholder {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .btn {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+
+    &-tip-selector {
+      color: $color-neutral-white;
+      &:hover {
+        color: $color-neutral-very-dark-cyan;
+      }
+
+      &.selected {
+        color: $color-neutral-very-dark-cyan;
+      }
+    }
+
+    &-reset {
+      color: $color-neutral-very-dark-cyan;
+      text-transform: uppercase;
+    }
+  }
+
+  .tip-selector {
+    .btn-tip-selector {
+    }
+  }
 }

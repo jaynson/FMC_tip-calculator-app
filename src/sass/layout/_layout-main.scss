@@ -6,3 +6,51 @@
     padding: 0;
   }
 }
+
+///////////////////////////////////////////////////////////
+////        COMPONENT
+.component {
+  max-width: $main-component-max-width-desktop;
+  background-color: $color-neutral-lighter-grayish-cyan;
+  @include margin-centralize;
+  padding: 20rem 0;
+}
+
+///////////////////////////////////////////////////////////
+////        APP
+.app {
+  max-width: $content-max-width-desktop;
+  @include margin-centralize;
+  background-color: $color-neutral-white;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+///////////////////////////////////////////////////////////
+////        CALCULATOR VIEW
+.calculator-view {
+  padding: 1rem;
+  flex: 0 0 48.5%;
+
+  .bill-section,
+  .tip-section {
+    margin-bottom: 2.5rem;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        Tip Selector View
+.tip-selector-view {
+  .tips-wrapper {
+    height: 13rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .tip-selector {
+    flex: 0 0 30%;
+  }
+}
