@@ -1,0 +1,57 @@
+///////////////////////////////////////////////////////////
+////        USER INPUT
+.user-input {
+  &--wrapper {
+    position: relative;
+  }
+  &__field {
+    border: 0.2rem solid transparent;
+    background-color: $color-neutral-light-grayish-cyan;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    transition: all 0.4s;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+      border: 0.2rem solid $color-primary-strong-cyan;
+    }
+
+    &.invalid {
+      border: 0.2rem solid rgba(241, 59, 13, 0.89);
+    }
+
+    & + .invalid-value {
+      position: absolute;
+      top: -1.5rem;
+      right: 0;
+      @include respond(375) {
+        top: 100%;
+      }
+    }
+
+    &--custom-tip {
+      & + .invalid-value {
+        display: none;
+      }
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        iCON
+.icon__svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+
+// Remove spinners
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

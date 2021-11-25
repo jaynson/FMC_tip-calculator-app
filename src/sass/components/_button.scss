@@ -1,0 +1,36 @@
+///////////////////////////////////////////////////////////
+////        BUTTON
+.btn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.8rem 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+///////////////////////////////////////////////////////////
+////        BUTTON - TIP SELECTOR
+.btn-tip-selector {
+  background-color: $color-neutral-very-dark-cyan;
+
+  &:hover {
+    background-color: $color-neutral-lighter-grayish-cyan;
+  }
+  &.selected {
+    background-color: $color-primary-strong-cyan;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        BUTTON - RESET
+.btn-reset {
+  background-color: $color-primary-strong-cyan;
+  &:hover {
+    background-color: $color-neutral-lighter-grayish-cyan;
+  }
+
+  &.inactive {
+    background-color: rgba($color-neutral-white, 0.2);
+    cursor: auto;
+  }
+}

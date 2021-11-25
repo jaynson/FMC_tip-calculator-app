@@ -1,0 +1,52 @@
+///////////////////////////////////////////////////////////
+////        DISPLAY PANEL VIEW
+.display-panel-view {
+  background-color: $color-neutral-very-dark-cyan;
+  flex: 0 0 48.5%;
+  border-radius: 1.6rem;
+
+  @include respond(680) {
+    flex: 1;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        DISPLAY PANEL CONTENT
+.display-panel-content {
+  height: 100%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  @include respond(680) {
+    padding: 2.5rem;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        PANELS
+.panels {
+  margin-bottom: auto;
+  @include respond(680) {
+    margin-bottom: 4rem;
+  }
+}
+
+///////////////////////////////////////////////////////////
+////        Display Panel
+.display-panel {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  //label
+  &__label {
+    margin-right: auto;
+  }
+
+  //output
+  &__output {
+  }
+}
